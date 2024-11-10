@@ -1,5 +1,383 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+    background-image: var(--bgImage);
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+.header::after {
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    content: '';
+    border-color: var(--textColor);
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+    height: 25px;
+    width: 25px;
+}
+
+.header::before {
+    bottom: 20px;
+    left: 20px;
+    position: absolute;
+    content: '';
+    border-color: var(--textColor);
+    border-style: solid;
+    border-width: 0 0 1px 1px;
+    height: 25px;
+    width: 25px;
+}
+
+.header__theme-menu {
+    position: absolute;
+    width: 100%;
+    top: 20px;
+    display: flex;
+}
+
+.header__theme-menu-list {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header__theme-menu-item {
+    margin-right: 10px;
+}
+
+.header__theme-menu-item:last-child {
+    margin-right: 0;
+}
+
+.header__theme-menu-button {
+    cursor: pointer;
+    text-align: center;
+    background-color: transparent;
+    padding: 0 13px;
+    border: 1px solid transparent;
+}
+
+.header__theme-menu-button:focus-visible {
+    border-bottom-color: var(--textColor);
+}
+
+.header__theme-menu-button:hover {
+    border-color: var(--hoverButton);
+}
+
+.header__theme-menu-button_active {
+    pointer-events: none;
+    border-color: var(--textColor);
+}
+
+
+.header__title {
+    color: var(--titleColor);
+    font-weight: 700;
+    font-size: 157px;
+    text-shadow: 4px 4px 0 var(--titleShadowColor);
+}
+
+.bold-text {
+    font-weight: 700;
+}
+
+.normal-text {
+    font-weight: 400;
+}
+
+.decor-text {
+    background-color: var(--backgroundColor);
+}
+
+.header__description {
+    width: 491px;
+    margin: 114px 20px 0 auto;
+}
+
+.main {
+    max-width: 1024px;
+    margin: 60px auto 0;
+    padding: 0 20px;
+}
+
+.href {
+    text-decoration: none;
+    border: 1px solid transparent;
+    text-shadow: 2px 2px 0 var(--backgroundColor);
+}
+
+.href:hover {
+    border-bottom-color: var(--textColor);
+}
+
+.href:focus-visible {
+    border-color: var(--textColor);
+}
+
+.main__first {
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.content__title {
+    margin-bottom: 10px;
+}
+
+.first__content .content__main-text:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.title-content-second {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: 20px;
+}
+
+.second__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.main__second {
+    margin-bottom: 80px;
+}
+
+.main__third {
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.third-title {
+    margin-bottom: 20px;
+}
+
+.main__third .content__main-text:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.img-content__title {
+    margin-bottom: 20px;
+}
+
+.img-content {
+    margin-bottom: 60px;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 20px;
+}
+
+.images__item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item__1 {
+    grid-row: 1 / 3;
+    grid-column: 1 / 6;
+}
+
+.item__2 {
+    grid-row: 1 / 5;
+    grid-column: 6 / 9;
+}
+
+.item__3 {
+    grid-row: 3 / 9;
+    grid-column: 1 / 4;
+}
+
+.item__4 {
+    grid-row: 3 / 5;
+    grid-column: 4 / 6;
+}
+
+.item__5 {
+    grid-row: 5 / 9;
+    grid-column: 4 / 9;
+}
+
+.footer {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer::after {
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    content: '';
+    border-color: var(--textColor);
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+    height: 25px;
+    width: 25px;
+}
+
+.footer::before {
+    bottom: 20px;
+    left: 20px;
+    position: absolute;
+    content: '';
+    border-color: var(--textColor);
+    border-style: solid;
+    border-width: 0 0 1px 1px;
+    height: 25px;
+    width: 25px;
+}
+
+.footer__title {
+    color: var(--titleColor);
+    font-weight: 700;
+    font-size: 157px;
+    text-shadow: 4px 4px 0 var(--titleShadowColor);
+}
+
+@media (max-width: 850px) {
+    .header__title {
+        font-size: 120px;
+    }
+
+    .header__theme-menu {
+        position: relative;
+    }
+
+    .header__theme-menu-list {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    .header__theme-menu-item {
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    .header__description {
+        width: 364px;
+    }
+
+    .first__title {
+        margin-right: 10px;
+    }
+
+    .third__title {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header::after {
+        top: 10px;
+        right: 10px;
+    }
+
+    .header {
+        padding: 0 10px;
+    }
+
+    .header::before {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .header__title {
+        line-height: 95px;
+        font-size: 116px;
+    }
+
+    .header__description {
+        width: 100%;
+        margin-top: 55px;
+    }
+
+    .header__theme-menu-item {
+        margin-right: 0;
+    }
+
+    .main {
+        padding: 0 10px;
+        margin-top: 40px;
+    }
+
+    .main__first {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first__title {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .empty-block {
+        display: none;
+    }
+
+    .second__title {
+        width: 100%;
+    }
+
+    .title-content-second {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .second__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .third__title {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .main__third {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .images {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-content {
+        margin-bottom: 40px;
+    }
+
+    .footer::after {
+        top: 0;
+        right: 10px;
+    }
+
+    .footer::before {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .footer__title {
+        font-size: 116px
+    }
 }
