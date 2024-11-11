@@ -6,14 +6,3 @@
     --backgroundColor: rgba(255, 141, 203, 1);
     --hoverButton: rgba(50, 49, 45, 0.4);
 }
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --bgImage: url(../images/cover-image-light.png);
-        --textColor: rgba(53, 52, 48, 1);
-        --titleColor: rgba(255, 194, 230, 1);
-        --titleShadowColor: rgba(255, 0, 112, 1);
-        --backgroundColor: rgba(255, 141, 203, 1);
-        --hoverButton: rgba(50, 49, 45, 0.4);
-    }
-}
