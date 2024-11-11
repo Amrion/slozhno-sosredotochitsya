@@ -7,13 +7,14 @@
     --titleShadowColor: rgba(255, 0, 112, 1);
     --backgroundColor: rgba(255, 0, 112, 1);
     --hoverButton: rgba(255, 0, 112, 0.4);
+    --backColor: #000028;
 }
 
 .page .theme_dark {
     --bgImage: url(../images/cover-image-dark.png);
 }
 
-.theme_dark .dark-rec-container {
+.theme_dark .rec-container {
     display: flex;
 }
 
@@ -27,5 +28,10 @@
         --titleShadowColor: rgba(255, 0, 112, 1);
         --backgroundColor: rgba(255, 0, 112, 1);
         --hoverButton: rgba(255, 0, 112, 0.4);
+        --backColor: #000028;
+    }
+
+    .theme_auto .rec-container {
+        display: flex;
     }
 }
